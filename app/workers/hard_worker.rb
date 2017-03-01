@@ -10,7 +10,7 @@ class HardWorker
     boot_twilio
     sms = @client.messages.create(
       from: ENV['TWILIO_NUMBER'],
-      to: ENV['JAMES'],
+      to: ENV['JONATHAN'],
       body: response
     )
   end
