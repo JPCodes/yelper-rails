@@ -2,5 +2,5 @@
 
 :schedule:
   hard_worker:
-    cron: 0 10 14 * * wed
+    cron: 0 0 17 * * fri
     class: HardWorker
