@@ -39,6 +39,8 @@ gem 'rest-client'
 gem 'twilio-ruby'
 gem 'zip-codes'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'uri'
+gem 'net/http'
 
 
 group :development, :test do
