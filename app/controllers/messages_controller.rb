@@ -2,13 +2,14 @@ class MessagesController < ApplicationController
   include ApiHelper
   skip_before_filter :verify_authenticity_token
   def reply
-    message_body = params["Body"]
+    new_response = YelpResponse.new(params["Body"])
     from_number = params["From"]
+    response = new_response.process_response
     boot_twilio
     sms = @client.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: from_number,
-      body: "Hello there, thanks for texting me. Your number is #{from_number}."
+      body: response
     )
   end
   private
