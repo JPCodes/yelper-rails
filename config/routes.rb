@@ -3,6 +3,7 @@ require 'sidekiq-scheduler'
 require 'sidekiq-scheduler/web'
 Rails.application.routes.draw do
 
+  root to: "home#index"
   resource :messages do
     collection do
       post 'reply'
