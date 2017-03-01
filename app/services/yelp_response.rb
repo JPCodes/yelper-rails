@@ -18,12 +18,12 @@ class YelpResponse
         business_address = parsed_api_response['businesses'][@i]['location']['address1']
         business_name = parsed_api_response['businesses'][@i]['name']
         business_rating = parsed_api_response['businesses'][@i]['rating']
-        @response.concat("#{business_name}(#{business_address}, #{business_rating}). \n")
+        @response.concat("#{business_name} (#{business_address}, #{business_rating}). \n")
         @i +=1
       end
       return @response
     else
-      return "Please enter your request in the following format: 'Term' 'Location'. Ex: 'Delis Portland'"
+      "Please enter your request in the following format: 'Term' 'Location'. Ex: 'Delis Portland'"
     end
   end
 end
