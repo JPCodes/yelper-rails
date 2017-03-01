@@ -21,7 +21,7 @@ class YelpResponse
         end
         @response
       else
-        "Please try another search, Ex: 'Delis Portland $$'"
+        "Please try another search, Ex: 'Delis, Portland, $$'"
       end
     elsif @body.split(',').length == 2
       api_response = get_restaurants(@body.downcase.split(',')[0], @body.downcase.split(',')[1])
@@ -38,10 +38,10 @@ class YelpResponse
         end
         @response
       else
-        "Please try another search, Ex: 'Delis Portland'"
+        "Please try another search, Ex: 'Delis, Portland'"
       end
     else
-      "Please enter your request in the following format: 'Term' 'Location'. Ex: 'Delis Portland'"
+      "Please enter your request in the following format: Term, Location. Ex: 'Delis, Portland'"
     end
   end
 
