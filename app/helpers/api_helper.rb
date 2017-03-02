@@ -29,4 +29,13 @@ module ApiHelper
       ##include error messages
     end
   end
+
+  # def get_google_map
+  #   begin
+  #     RestClient.get("http://maps.googleapis.com/maps/api/staticmap?zoom=17&format=png&sensor=false&size=280x280&maptype=roadmap&style=element:geometry.fill|color:0xf4f4f4&markers=color:red|40.725255,-73.996842&scale=2")
+  #   rescue
+  #     puts "Something went wrong"
+  #   end
+  # end
+
 end
