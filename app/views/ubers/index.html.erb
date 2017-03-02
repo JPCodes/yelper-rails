@@ -4,7 +4,7 @@
 <% if @end_latitude %>
   <%= link_to "https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=#{@end_latitude}&dropoff[longitude]=#{@end_longitude}&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383" do %>
     <div class="button">
-
+      <p id="button-text">Go!</p>
     </div>
   <% end %>
 <% end %>

@@ -24,20 +24,21 @@
         padding: 8px 15px;
 }
 .button {
-    background-image: asset-url('UBER_API_Button_2x_Black_1px_round.png');
+    background-image: asset-url('UBER_API_Button_2x_Grey_1px_round.png');
     background-size: cover;
     width: 280px;
     height: 44px;
     margin: 0 auto;
-    border: 3px solid #fff;
-    border-radius: 5px;
 }
 
-#time {
+#button-text {
     text-align: right;
     margin-top: 2%;
     padding-top: 12px;
     padding-right: 14px;
+    font-family: monospace;
+    font-size: 1.2em;
+    color: #000;
 }
 
 .map {
