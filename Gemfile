@@ -45,6 +45,7 @@ gem 'slim', ">= 1.3.0" #pseudo language
 gem 'sinatra', :require => false #interface
 gem 'sidekiq-scheduler'
 gem 'geocoder'
+gem 'bootstrap_form'
 
 
 group :development, :test do

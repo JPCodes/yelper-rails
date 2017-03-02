@@ -1,13 +1,10 @@
 <h1>Search for a Business</h1>
 
-<%= form_tag(yelp_index_path, method: 'post', remote: true, :enforce_utf8 => false) do %>
-  <%= label_tag "Search Term" %>
-  <%= text_field_tag :term %><br>
-  <%= label_tag "City" %>
-  <%= text_field_tag :city %><br>
-  <%= label_tag "Price Point ($, $$, $$$, $$$$)" %>
-  <%= text_field_tag :price_point %><br>
-  <%= submit_tag "Search" %>
+<%= bootstrap_form_tag remote: true do |f| %>
+  <%= f.text_field :term, placeholder: 'Tacos' %><br>
+  <%= f.text_field :city, placeholder: 'Portland' %><br>
+  <%= f.text_field :price_point, placeholder: '$$' %><br>
+  <%= f.submit "Search" %>
 <% end %>
 
 <div class="businesses">

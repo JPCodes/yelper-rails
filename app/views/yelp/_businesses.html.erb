@@ -1,13 +1,19 @@
 <h3>Here are your results:</h3>
-<% @businesses['businesses'].each do |business| %>
-  <li><%= business['name'] %></li>
-  <li>Rating: <%= business['rating'] %></li>
-  <li><%= business['location']['address1'] %></li>
-  <li><%= business['location']['city'] %></li>
-  <li><%= business['location']['state'] %></li>
-  <li>Long: <%= business['coordinates']['longitude'] %></li>
-  <li>Lat: <%= business['coordinates']['latitude'] %></li>
-  <li><%= link_to 'Take Me Here, bro', ubers_path(longitude: business['coordinates']['longitude'], latitude: business['coordinates']['latitude']) %></li>
 
-  <hr>
+
+<% @businesses['businesses'].in_groups_of(3, false).each do |company| %>
+  <div class="row">
+      <% company.each do |business| %>
+      <div class="col-md-4 col-sm-4">
+        <div class="card" style="width: 20rem;">
+          <%= image_tag(business['image_url'], class: 'card-img-top img-responsive', alt: business['name'])%>
+          <div class="card-block">
+            <h4 class="card-title"><%= business['name'] %></h4>
+            <p class="card-text"><%= business['location']['address1'] %>, <%= business['location']['city'] %>, <%= business['location']['state'] %></p>
+            <%= link_to 'Take Me Here, bro', ubers_path(longitude: business['coordinates']['longitude'], latitude: business['coordinates']['latitude']), class: 'btn btn-primary' %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
 <% end %>
