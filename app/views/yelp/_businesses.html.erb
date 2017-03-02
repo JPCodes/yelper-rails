@@ -1,0 +1,13 @@
+<h3>Here are your results:</h3>
+<% @businesses['businesses'].each do |business| %>
+  <li><%= business['name'] %></li>
+  <li>Rating: <%= business['rating'] %></li>
+  <li><%= business['location']['address1'] %></li>
+  <li><%= business['location']['city'] %></li>
+  <li><%= business['location']['state'] %></li>
+  <li>Long: <%= business['coordinates']['longitude'] %></li>
+  <li>Lat: <%= business['coordinates']['latitude'] %></li>
+  <li><%= link_to 'Take Me Here, bro', ubers_path(longitude: business['coordinates']['longitude'], latitude: business['coordinates']['latitude']) %></li>
+
+  <hr>
+<% end %>
