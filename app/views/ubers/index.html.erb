@@ -1,6 +1,6 @@
 <h1>The Uber Page</h1>
 
-  <%= link_to get_route_path, remote: true do %>
+  <%= link_to get_route_path(latitude: @end_latitude, longitude: @end_longitude), remote: true do %>
     <div class="button">
     <p id="time"><%= @fastest_ride %> minutes</p>
     </div>

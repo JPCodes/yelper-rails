@@ -16,12 +16,10 @@ module ApiHelper
     end
   end
 
-  def getEstimatesForUserLocation
+  def getEstimatesForUserLocation(end_latitude, end_longitude)
     begin
       start_latitude = 45.6318
       start_longitude = -122.6716
-      end_latitude = 45.5231
-      end_longitude = -122.6765
       RestClient.get("https://api.uber.com/v1.2/estimates/price?start_latitude=#{start_latitude}&start_longitude=#{start_longitude}&end_latitude=#{end_latitude}&end_longitude=#{end_longitude}", headers={ "authorization": ENV['YOUR_SERVER_TOKEN']})
       # Sort fastest times
     rescue
