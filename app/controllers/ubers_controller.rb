@@ -2,6 +2,7 @@ class UbersController < ApplicationController
   include ApiHelper
   def index
     if params[:latitude] && params[:longitude]
+      @name = params[:name]
       @end_latitude = params[:latitude]
       @end_longitude = params[:longitude]
       @response = JSON.parse(getEstimatesForUserLocation(@end_latitude, @end_longitude))
@@ -13,6 +14,7 @@ class UbersController < ApplicationController
 
   def get_route
     if params[:latitude] && params[:longitude]
+      @name = params[:name]
       @end_latitude = params[:latitude]
       @end_longitude = params[:longitude]
       @response = JSON.parse(getEstimatesForUserLocation(@end_latitude, @end_longitude))

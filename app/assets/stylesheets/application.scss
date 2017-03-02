@@ -16,7 +16,13 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+        border: 1px solid #888;
+        padding: 8px 15px;
+}
 .button {
     background-image: url('../assets/UBER_API_Button_2x_Black_1px_round.png');
     background-size: cover;

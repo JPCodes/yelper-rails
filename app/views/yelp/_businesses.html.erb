@@ -1,4 +1,4 @@
-<h3>Here are your results:</h3>
+<h3 class="text-center">Here are your results:</h3>
 
 
 <% @businesses['businesses'].in_groups_of(3, false).each do |company| %>
@@ -6,11 +6,11 @@
       <% company.each do |business| %>
       <div class="col-md-4 col-sm-4">
         <div class="card" style="width: 20rem;">
-          <%= image_tag(business['image_url'], class: 'card-img-top img-responsive', alt: business['name'])%>
+          <%= image_tag(business['image_url'], class: 'card-img-top img-responsive img-rounded', alt: business['name'])%>
           <div class="card-block">
             <h4 class="card-title"><%= business['name'] %></h4>
             <p class="card-text"><%= business['location']['address1'] %>, <%= business['location']['city'] %>, <%= business['location']['state'] %></p>
-            <%= link_to 'Take Me Here, bro', ubers_path(longitude: business['coordinates']['longitude'], latitude: business['coordinates']['latitude']), class: 'btn btn-primary' %>
+            <%= link_to 'Let\'s go!', ubers_path(longitude: business['coordinates']['longitude'], latitude: business['coordinates']['latitude'], name: business['name']), class: 'btn btn-primary' %>
           </div>
         </div>
       </div>

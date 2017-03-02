@@ -1,12 +1,10 @@
-<h1>The Uber Page</h1>
-
-  <%= link_to get_route_path(latitude: @end_latitude, longitude: @end_longitude), remote: true do %>
-    <div class="button">
-    <p id="time"><%= @fastest_ride %> minutes</p>
-    </div>
-  <% end %>
+<h1 class="center-text">Get to <%= @name %> in <%= @fastest_ride %> minutes.</h1>
 
 <img src="<%= @map %>">
 <% if @end_latitude %>
-  <%= link_to 'Open App to See Information', "https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=#{@end_latitude}&dropoff[longitude]=#{@end_longitude}&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383" %>
+  <%= link_to "https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=#{@end_latitude}&dropoff[longitude]=#{@end_longitude}&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383" do %>
+    <div class="button">
+
+    </div>
+  <% end %>
 <% end %>
