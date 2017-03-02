@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :ubers, :only => [:index]
+  get 'get-route', to: 'ubers#get_route', as: 'get_route'
+
   mount Sidekiq::Web, at: '/sidekiq'
 
 end

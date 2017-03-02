@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+// create placeholder variables
+// Uber API Constants
+
+
+var userLatitude
+  , userLongitude;
+
+navigator.geolocation.watchPosition(function(position) {
+  console.log(position);
+    // Update latitude and longitude
+    userLatitude = position.coords.latitude;
+    userLongitude = position.coords.longitude;
+});
