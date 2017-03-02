@@ -29,6 +29,8 @@
     width: 280px;
     height: 44px;
     margin: 0 auto;
+    border: 3px solid #fff;
+    border-radius: 5px;
 }
 
 #time {
@@ -41,4 +43,20 @@
 .map {
   margin-top: 15px;
   margin-bottom: 15px;
+  border: 8px solid #40E0D0;
+}
+
+html {
+  height: 100%;
+}
+
+.ubers {
+  min-height: 100%;
+  background-image: asset-url('city.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #40E0D0;
+    h1 {
+      color: #fff;
+    }
 }
