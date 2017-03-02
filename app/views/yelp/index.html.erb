@@ -1,0 +1,15 @@
+<h1>Search for a Business</h1>
+
+<%= form_tag(yelp_index_path, method: 'post', remote: true) do %>
+  <%= label_tag "Search Term" %>
+  <%= text_field_tag :term %><br>
+  <%= label_tag "City" %>
+  <%= text_field_tag :city %><br>
+  <%= label_tag "Price Point ($, $$, $$$, $$$$)" %>
+  <%= text_field_tag :price_point %><br>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<div class="businesses">
+
+</div>

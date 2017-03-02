@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :ubers, :only => [:index]
+  resources :yelp
   get 'get-route', to: 'ubers#get_route', as: 'get_route'
 
   mount Sidekiq::Web, at: '/sidekiq'
