@@ -1,8 +1,16 @@
 <div class="container">
   <h1>Welcome to Twilio Yelper</h1>
-  <h3>This app will send you text messages with restaurant recommendations.</h3>
-  <h3>The format is: "term, location" or "term, location, price point" (price point is $ signs up to 4)</h3>
-  <h3>Unfortunately, it only works for verified numbers so far. Shoot <%= link_to "James", "https://github.com/JPCodes" %> or <%= link_to "Jonathan", "https://github.com/JonathanWThom" %> a message to get verified</h3>
+  <h2>This app has two purposes: The one you can see and the one you can't.</h2>
 
-  <h3>Uses the <%= link_to "Twilio", "https://www.twilio.com" %> and <%= link_to "Yelp Fusion", "https://www.yelp.com/developers" %></h3>
+  <h3>The one you can see:</h3>
+  <h4>Go to the <%= link_to 'Home Page', yelp_index_path %> and search for a business.</h4>
+  <h4>Select one, then book a ride there with Uber. This works best on your phone.</h4>
+
+
+  <h3>The one you can't:</h3>
+  <h4>This app will send you text messages with restaurant recommendations.</h4>
+  <h4>The format is: "term, location" or "term, location, price point" (price point is $ signs up to 4)</h4>
+  <h4>Unfortunately, it only works for verified numbers so far. Shoot <%= link_to "James", "https://github.com/JPCodes" %> or <%= link_to "Jonathan", "https://github.com/JonathanWThom" %> a message to get verified</h4>
+
+  <h3>Uses the <%= link_to "Twilio", "https://www.twilio.com" %>, <%= link_to "Yelp Fusion", "https://www.yelp.com/developers" %>, and <%= link_to "Uber", "https://developer.uber.com/" %> APIs.</h3>
 </div>
