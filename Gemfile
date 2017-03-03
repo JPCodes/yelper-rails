@@ -46,6 +46,7 @@ gem 'sinatra', :require => false #interface
 gem 'sidekiq-scheduler'
 gem 'geocoder'
 gem 'bootstrap_form'
+gem 'will_paginate', '~> 3.1.0'
 
 
 group :development, :test do
