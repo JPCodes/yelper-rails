@@ -23,7 +23,13 @@ module ApiHelper
       RestClient.get("https://api.uber.com/v1.2/estimates/price?start_latitude=#{start_latitude}&start_longitude=#{start_longitude}&end_latitude=#{end_latitude}&end_longitude=#{end_longitude}", headers={ "authorization": ENV['YOUR_SERVER_TOKEN']})
       # Sort fastest times
     rescue
-      "Error"
+      if end_latitude
+        puts "Expecting a Latitude: " + end_latitude
+      end
+      if end_longitude
+        puts "Expecting a Longitude: " + end_longitude
+      end
+      puts "Error Uber API"
       ##include error messages
     end
   end
