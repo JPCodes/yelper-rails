@@ -68,3 +68,9 @@ body {
   overflow: scroll;
   max-height: 55vh;
 }
+
+@media (max-width: 480px) {
+  body {
+    background-repeat:repeat;
+  }
+}
